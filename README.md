@@ -1,30 +1,43 @@
-# 📘 Saudação LICA (Projeto Final Git)
+# Projeto Final Git - Engenharia de Dados (CVU)
 
-## 📝 Descrição
-Este é um projeto simples desenvolvido para cumprir o desafio final de versionamento e colaboração do onboarding do LICA. O objetivo principal é demonstrar o domínio sobre ramificações (branches), commits semânticos e o fluxo de Pull/Merge Requests.
+**Autor(a):** Talita Santos Cordeiro ([@TalitaSCordeiro](https://github.com/TalitaSCordeiro))
+**Projeto:** Onboarding / Git Roadmap - LICA
 
-## ⚙️ Tecnologias e Ferramentas Utilizadas
-- Git
-- GitHub / GitLab
-- Python
+---
 
-## 💻 Como Executar o Projeto
+## 📌 Descrição
+Este repositório contém o projeto final do treinamento de Git do Laboratório de Inteligência Computacional Aplicada (LICA). O projeto consiste em um pipeline de Engenharia de Dados focado na extração, transformação e carregamento (ETL) de dados sobre o Custo Variável Unitário (CVU) de usinas térmicas.
 
-Instruções passo a passo para executar o projeto localmente:
+Os dados são extraídos da API de dados abertos do Operador Nacional do Sistema Elétrico (ONS), processados para remoção de duplicatas e ordenação, e por fim consolidados e particionados por subsistema.
 
-```bash
-# Clone o repositório
-git clone git@github.com:TalitaSCordeiro/projeto-final-git-talita.git
+## 🛠️ Tecnologias Utilizadas
+- **Linguagem:** Python 3
+- **Bibliotecas:** `pandas` (manipulação de dados), `curl_cffi` (requisições HTTP)
+- **Versionamento:** Git, GitHub e GitLab
 
-# Aceda à pasta
-cd projeto-final-git-talita
+## 📂 Estrutura do Repositório
+- `main.py`: Script principal de orquestração do pipeline (Extract, Transform, Validate, Load e Split).
+- `requirements.txt`: Lista de dependências e bibliotecas Python necessárias.
+- `data/`: Diretório que armazena os dados brutos (`source_raw/`) e os dados limpos e particionados (`processed/`).
 
-# Execute o script principal
-python app.py
-```
+## 💻 Como Rodar o Projeto
+
+1. **Clone o repositório e acesse a pasta:**
+   ```bash
+   git clone https://github.com/TalitaSCordeiro/projeto-final-git-talita.git
+   
+   # Acesse a pasta
+   cd projeto-final-git-talita
+
+   # Instale dependências
+   pip install -r requirements.txt
+
+   # Execute o projeto
+   python main.py
+
 
 ## 👥 Colaboradores
 
-| Nome            | GitHub                                                 |
-| --------------- | ------------------------------------------------------ |
-| Talita Cordeiro | [@TalitaSCordeiro](https://github.com/TalitaSCordeiro) |
+| Nome                   | GitHub                                                 |
+| ---------------------- | ------------------------------------------------------ |
+| Talita Santos Cordeiro | [@TalitaSCordeiro](https://github.com/TalitaSCordeiro) |
