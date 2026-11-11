@@ -133,7 +133,7 @@ def main() -> None:
     
     dfs_separados = split_by_subsystem(df)
     for subsistema, df_sub in dfs_separados.items():
-        nome_arquivo = f"cvu_usitermica_{subsistema.lower().replace(' ', '_')}.csv"
+        nome_arquivo = f"cvu_usitermica_{subsistema.lower().replace(' ', '_').replace('/', '-')}.csv"
         file_path_sub = PROCESSED_PATH / nome_arquivo
         load(df_sub, file_path_sub)
 
