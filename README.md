@@ -1,36 +1,43 @@
-# ⚡ Pipeline de Dados - CVU Usinas Térmicas (Projeto Final Git)
+# Projeto Final Git - Engenharia de Dados (CVU)
 
-## 📄 Descrição
-Este projeto consiste num pipeline de Engenharia de Dados desenvolvido como desafio final do onboarding de Git do LICA. O script automatiza a extração, transformação e carregamento (ETL) de dados do Custo Variável Unitário (CVU) de usinas termelétricas, a partir da API do Operador Nacional do Sistema Elétrico (ONS).
+**Autor(a):** Talita Santos Cordeiro ([@TalitaSCordeiro](https://github.com/TalitaSCordeiro))
+**Projeto:** Onboarding / Git Roadmap - LICA
 
-O objetivo principal foi demonstrar o domínio sobre ramificações (branches), commits semânticos e o fluxo de Pull/Merge Requests, além da aplicação prática em tratamento de dados com Python.
+---
 
-## ⚙️ Tecnologias e Ferramentas Utilizadas
-- **Versionamento:** Git, GitHub / GitLab
-- **Linguagem:** Python
-- **Bibliotecas:** `pandas`, `curl_cffi`, `pathlib`
+## 📌 Descrição
+Este repositório contém o projeto final do treinamento de Git do Laboratório de Inteligência Computacional Aplicada (LICA). O projeto consiste em um pipeline de Engenharia de Dados focado na extração, transformação e carregamento (ETL) de dados sobre o Custo Variável Unitário (CVU) de usinas térmicas.
 
-## 🚀 Como Executar o Projeto
+Os dados são extraídos da API de dados abertos do Operador Nacional do Sistema Elétrico (ONS), processados para remoção de duplicatas e ordenação, e por fim consolidados e particionados por subsistema.
 
-Instruções passo a passo para executar o pipeline localmente:
+## 🛠️ Tecnologias Utilizadas
+- **Linguagem:** Python 3
+- **Bibliotecas:** `pandas` (manipulação de dados), `curl_cffi` (requisições HTTP)
+- **Versionamento:** Git, GitHub e GitLab
 
-```bash
-# Clone o repositório
-git clone git@github.com:TalitaSCordeiro/projeto-final-git-talita.git
+## 📂 Estrutura do Repositório
+- `main.py`: Script principal de orquestração do pipeline (Extract, Transform, Validate, Load e Split).
+- `requirements.txt`: Lista de dependências e bibliotecas Python necessárias.
+- `data/`: Diretório que armazena os dados brutos (`source_raw/`) e os dados limpos e particionados (`processed/`).
 
-# Aceda à pasta do projeto
-cd projeto-final-git-talita
+## 💻 Como Rodar o Projeto
 
-# Instale as dependências (certifique-se que tem o Python instalado)
-pip install pandas curl-cffi
+1. **Clone o repositório e acesse a pasta:**
+   ```bash
+   git clone https://github.com/TalitaSCordeiro/projeto-final-git-talita.git
+   
+   # Acesse a pasta
+   cd projeto-final-git-talita
 
-# Execute o script principal
-python main.py
+   # Instale dependências
+   pip install -r requirements.txt
 
-```
+   # Execute o projeto
+   python main.py
+   ```
 
 ## 👥 Colaboradores
 
-| Nome            | GitHub                                                 |
-| --------------- | ------------------------------------------------------ |
-| Talita Cordeiro | [@TalitaSCordeiro](https://github.com/TalitaSCordeiro) |
+| Nome                   | GitHub                                                 |
+| ---------------------- | ------------------------------------------------------ |
+| Talita Santos Cordeiro | [@TalitaSCordeiro](https://github.com/TalitaSCordeiro) |
