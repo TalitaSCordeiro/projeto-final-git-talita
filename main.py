@@ -125,6 +125,8 @@ def main() -> None:
     paths = extract()
     df = transform(paths)
     validate(df)
+
+    PROCESSED_PATH.mkdir(parents=True, exist_ok=True)
     
     file_path_full = PROCESSED_PATH / "cvu_usitermica_completo.csv"
     load(df, file_path_full)
